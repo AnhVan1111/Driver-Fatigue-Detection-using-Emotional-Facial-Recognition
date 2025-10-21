@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Driver Fatigue Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🚗 Driver Fatigue Detection</h1>
+
+        <div class="video-container">
+            <img src="{{ url_for('video_feed') }}" id="video-stream" alt="Video stream">
+        </div>
+
+        <div class="status-container">
+            <p>Status: <span id="driver-status">Monitoring...</span></p>
+        </div>
+
+        <div class="controls">
+            <button onclick="startMonitoring()">Start Monitoring</button>
+            <button onclick="stopMonitoring()">Stop</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
